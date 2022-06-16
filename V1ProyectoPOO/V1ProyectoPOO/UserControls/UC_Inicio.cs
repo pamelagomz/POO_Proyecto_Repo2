@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Timers;
@@ -34,6 +35,11 @@ namespace V1ProyectoPOO.UserControls
                 if (contadorBanner == ListaImagenes.Count)
                     contadorBanner = 0;
             }
+        }
+
+        private void UC_Inicio_Load(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
