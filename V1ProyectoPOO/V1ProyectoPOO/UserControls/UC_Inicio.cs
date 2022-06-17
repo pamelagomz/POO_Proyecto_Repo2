@@ -37,9 +37,6 @@ namespace V1ProyectoPOO.UserControls
             }
         }
 
-        private void UC_Inicio_Load(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }
