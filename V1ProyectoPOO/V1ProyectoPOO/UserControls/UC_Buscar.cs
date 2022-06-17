@@ -16,6 +16,7 @@ namespace V1ProyectoPOO.UserControls
             {
 
                 List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorTitulo(txtBuscarEjemplar.Text.Trim()); // Ponele el nombre de la txt box
+                txtBuscarEjemplar.Clear();
 
                 dgvResultadosBusqueda.DataSource = null;
                 dgvResultadosBusqueda.DataSource = resultado;
@@ -25,7 +26,7 @@ namespace V1ProyectoPOO.UserControls
             {
 
                 List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorTituloParcial(txtBuscarEjemplar.Text.Trim());
-
+                txtBuscarEjemplar.Clear();
                 dgvResultadosBusqueda.DataSource = null;
                 dgvResultadosBusqueda.DataSource = resultado;
 
@@ -34,7 +35,7 @@ namespace V1ProyectoPOO.UserControls
             {
 
                 List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorAutor(txtBuscarEjemplar.Text.Trim());
-
+                txtBuscarEjemplar.Clear();
                 dgvResultadosBusqueda.DataSource = null;
                 dgvResultadosBusqueda.DataSource = resultado;
 
@@ -42,8 +43,9 @@ namespace V1ProyectoPOO.UserControls
             else if (cmbOpcionesBuscar.Text == "Fisico")
             {
                 txtBuscarEjemplar.Text = cmbOpcionesBuscar.Text;
-                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorFormato(cmbOpcionesBuscar.Text.Trim());
-
+                
+                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorFormato(txtBuscarEjemplar.Text.Trim());
+                txtBuscarEjemplar.Clear();
                 dgvResultadosBusqueda.DataSource = null;
                 dgvResultadosBusqueda.DataSource = resultado;
 
@@ -51,8 +53,17 @@ namespace V1ProyectoPOO.UserControls
             else if (cmbOpcionesBuscar.Text == "Digital")
             {
                 txtBuscarEjemplar.Text = cmbOpcionesBuscar.Text;
-                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorFormato(cmbOpcionesBuscar.Text.Trim());
+                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorFormato(txtBuscarEjemplar.Text.Trim());
+                txtBuscarEjemplar.Clear();
+                dgvResultadosBusqueda.DataSource = null;
+                dgvResultadosBusqueda.DataSource = resultado;
 
+            }
+            else if (cmbOpcionesBuscar.Text == "Mostrar todos")
+            {
+                txtBuscarEjemplar.Text = cmbOpcionesBuscar.Text;
+                List<Ejemplar> resultado = BuscarEjemplarDAO.General();
+                txtBuscarEjemplar.Clear();
                 dgvResultadosBusqueda.DataSource = null;
                 dgvResultadosBusqueda.DataSource = resultado;
 
@@ -61,7 +72,7 @@ namespace V1ProyectoPOO.UserControls
             {
 
                 List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorPalabraClave(txtBuscarEjemplar.Text.Trim()); // Ponele el nombre de la txt box
-
+                txtBuscarEjemplar.Clear();
                 dgvResultadosBusqueda.DataSource = null;
                 dgvResultadosBusqueda.DataSource = resultado;
             }
