@@ -58,15 +58,17 @@ namespace BINAES_Proyecto.Forms
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtInstitucion = new System.Windows.Forms.TextBox();
-            this.txtUsuarioID = new System.Windows.Forms.TextBox();
-            this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txt = new System.Windows.Forms.TextBox();
+            this.txtUsuarioID = new System.Windows.Forms.TextBox();
+            this.btnGuardarQR = new System.Windows.Forms.Button();
+            this.btnCrearUsuario = new System.Windows.Forms.Button();
+            this.btnGenerarQR = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.Mostrar = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnMostrar = new System.Windows.Forms.Button();
+            this.tlpMostrarUsuario = new System.Windows.Forms.TableLayoutPanel();
             this.dgvMostrarUser = new System.Windows.Forms.DataGridView();
+            this.btnMostrar = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -75,7 +77,7 @@ namespace BINAES_Proyecto.Forms
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.Mostrar.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.tlpMostrarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dgvMostrarUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -248,10 +250,12 @@ namespace BINAES_Proyecto.Forms
             this.tableLayoutPanel3.Controls.Add(this.label9, 10, 1);
             this.tableLayoutPanel3.Controls.Add(this.label10, 1, 8);
             this.tableLayoutPanel3.Controls.Add(this.txtInstitucion, 1, 9);
-            this.tableLayoutPanel3.Controls.Add(this.txtUsuarioID, 2, 12);
-            this.tableLayoutPanel3.Controls.Add(this.btnCrearUsuario, 9, 11);
             this.tableLayoutPanel3.Controls.Add(this.label11, 8, 8);
             this.tableLayoutPanel3.Controls.Add(this.txt, 8, 9);
+            this.tableLayoutPanel3.Controls.Add(this.txtUsuarioID, 7, 3);
+            this.tableLayoutPanel3.Controls.Add(this.btnGuardarQR, 6, 11);
+            this.tableLayoutPanel3.Controls.Add(this.btnCrearUsuario, 10, 11);
+            this.tableLayoutPanel3.Controls.Add(this.btnGenerarQR, 2, 11);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 16;
@@ -266,8 +270,8 @@ namespace BINAES_Proyecto.Forms
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.641975F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.703704F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
@@ -402,27 +406,6 @@ namespace BINAES_Proyecto.Forms
             this.txtInstitucion.Size = new System.Drawing.Size(274, 26);
             this.txtInstitucion.TabIndex = 11;
             // 
-            // txtUsuarioID
-            // 
-            this.txtUsuarioID.Location = new System.Drawing.Point(115, 483);
-            this.txtUsuarioID.Name = "txtUsuarioID";
-            this.txtUsuarioID.Size = new System.Drawing.Size(48, 26);
-            this.txtUsuarioID.TabIndex = 13;
-            // 
-            // btnCrearUsuario
-            // 
-            this.btnCrearUsuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCrearUsuario.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
-            this.tableLayoutPanel3.SetColumnSpan(this.btnCrearUsuario, 3);
-            this.btnCrearUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCrearUsuario.Location = new System.Drawing.Point(507, 443);
-            this.btnCrearUsuario.Name = "btnCrearUsuario";
-            this.btnCrearUsuario.Size = new System.Drawing.Size(162, 34);
-            this.btnCrearUsuario.TabIndex = 12;
-            this.btnCrearUsuario.Text = "Crear usuario";
-            this.btnCrearUsuario.UseVisualStyleBackColor = false;
-            this.btnCrearUsuario.Click += new System.EventHandler(this.btnCrearUsuario_Click);
-            // 
             // label11
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
@@ -444,6 +427,56 @@ namespace BINAES_Proyecto.Forms
             this.txt.Size = new System.Drawing.Size(218, 26);
             this.txt.TabIndex = 15;
             // 
+            // txtUsuarioID
+            // 
+            this.txtUsuarioID.Location = new System.Drawing.Point(395, 123);
+            this.txtUsuarioID.Name = "txtUsuarioID";
+            this.txtUsuarioID.Size = new System.Drawing.Size(48, 26);
+            this.txtUsuarioID.TabIndex = 13;
+            // 
+            // btnGuardarQR
+            // 
+            this.btnGuardarQR.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardarQR.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.tableLayoutPanel3.SetColumnSpan(this.btnGuardarQR, 3);
+            this.btnGuardarQR.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnGuardarQR.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnGuardarQR.Location = new System.Drawing.Point(339, 443);
+            this.btnGuardarQR.Name = "btnGuardarQR";
+            this.btnGuardarQR.Size = new System.Drawing.Size(162, 50);
+            this.btnGuardarQR.TabIndex = 16;
+            this.btnGuardarQR.Text = "Guardar QR";
+            this.btnGuardarQR.UseVisualStyleBackColor = false;
+            // 
+            // btnCrearUsuario
+            // 
+            this.btnCrearUsuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrearUsuario.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.tableLayoutPanel3.SetColumnSpan(this.btnCrearUsuario, 3);
+            this.btnCrearUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnCrearUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCrearUsuario.Location = new System.Drawing.Point(563, 443);
+            this.btnCrearUsuario.Name = "btnCrearUsuario";
+            this.btnCrearUsuario.Size = new System.Drawing.Size(162, 50);
+            this.btnCrearUsuario.TabIndex = 12;
+            this.btnCrearUsuario.Text = "Crear usuario";
+            this.btnCrearUsuario.UseVisualStyleBackColor = false;
+            this.btnCrearUsuario.Click += new System.EventHandler(this.btnCrearUsuario_Click);
+            // 
+            // btnGenerarQR
+            // 
+            this.btnGenerarQR.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenerarQR.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.tableLayoutPanel3.SetColumnSpan(this.btnGenerarQR, 3);
+            this.btnGenerarQR.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnGenerarQR.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnGenerarQR.Location = new System.Drawing.Point(115, 443);
+            this.btnGenerarQR.Name = "btnGenerarQR";
+            this.btnGenerarQR.Size = new System.Drawing.Size(162, 50);
+            this.btnGenerarQR.TabIndex = 17;
+            this.btnGenerarQR.Text = "Generar QR";
+            this.btnGenerarQR.UseVisualStyleBackColor = false;
+            // 
             // tabPage4
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
@@ -456,7 +489,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // Mostrar
             // 
-            this.Mostrar.Controls.Add(this.tableLayoutPanel4);
+            this.Mostrar.Controls.Add(this.tlpMostrarUsuario);
             this.Mostrar.Location = new System.Drawing.Point(4, 34);
             this.Mostrar.Name = "Mostrar";
             this.Mostrar.Padding = new System.Windows.Forms.Padding(3);
@@ -465,51 +498,51 @@ namespace BINAES_Proyecto.Forms
             this.Mostrar.Text = "Mostrar";
             this.Mostrar.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel4
+            // tlpMostrarUsuario
             // 
-            this.tableLayoutPanel4.ColumnCount = 5;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.68702F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.5598F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.88041F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel4.Controls.Add(this.btnMostrar, 2, 1);
-            this.tableLayoutPanel4.Controls.Add(this.dgvMostrarUser, 1, 2);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 4;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.2967F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.7033F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 470F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(786, 646);
-            this.tableLayoutPanel4.TabIndex = 2;
-            // 
-            // btnMostrar
-            // 
-            this.btnMostrar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMostrar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (5)))), ((int) (((byte) (29)))), ((int) (((byte) (64)))));
-            this.btnMostrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMostrar.Location = new System.Drawing.Point(485, 62);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(189, 45);
-            this.btnMostrar.TabIndex = 1;
-            this.btnMostrar.Text = "Mostrar lista de usuarios";
-            this.btnMostrar.UseVisualStyleBackColor = false;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            this.tlpMostrarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpMostrarUsuario.ColumnCount = 4;
+            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.93578F));
+            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.06422F));
+            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 208F));
+            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tlpMostrarUsuario.Controls.Add(this.dgvMostrarUser, 1, 2);
+            this.tlpMostrarUsuario.Controls.Add(this.btnMostrar, 2, 0);
+            this.tlpMostrarUsuario.Location = new System.Drawing.Point(3, 3);
+            this.tlpMostrarUsuario.Name = "tlpMostrarUsuario";
+            this.tlpMostrarUsuario.RowCount = 4;
+            this.tlpMostrarUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.287926F));
+            this.tlpMostrarUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.572755F));
+            this.tlpMostrarUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.73065F));
+            this.tlpMostrarUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.25387F));
+            this.tlpMostrarUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpMostrarUsuario.Size = new System.Drawing.Size(786, 646);
+            this.tlpMostrarUsuario.TabIndex = 2;
             // 
             // dgvMostrarUser
             // 
-            this.dgvMostrarUser.AllowUserToDeleteRows = false;
             this.dgvMostrarUser.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMostrarUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableLayoutPanel4.SetColumnSpan(this.dgvMostrarUser, 2);
-            this.dgvMostrarUser.Location = new System.Drawing.Point(75, 113);
+            this.tlpMostrarUsuario.SetColumnSpan(this.dgvMostrarUser, 2);
+            this.dgvMostrarUser.Location = new System.Drawing.Point(110, 99);
             this.dgvMostrarUser.Name = "dgvMostrarUser";
             this.dgvMostrarUser.RowTemplate.Height = 28;
-            this.dgvMostrarUser.Size = new System.Drawing.Size(599, 464);
+            this.dgvMostrarUser.Size = new System.Drawing.Size(562, 438);
             this.dgvMostrarUser.TabIndex = 0;
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (5)))), ((int) (((byte) (29)))), ((int) (((byte) (64)))));
+            this.btnMostrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMostrar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnMostrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMostrar.Location = new System.Drawing.Point(470, 3);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(202, 54);
+            this.btnMostrar.TabIndex = 1;
+            this.btnMostrar.Text = "Mostrar Usuarios";
+            this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click_1);
             // 
             // frmUsuario
             // 
@@ -530,12 +563,19 @@ namespace BINAES_Proyecto.Forms
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.Mostrar.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tlpMostrarUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dgvMostrarUser)).EndInit();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Button btnGuardarQR;
+        private System.Windows.Forms.Button btnGenerarQR;
+
+        private System.Windows.Forms.Button btnMostrar;
+
+        private System.Windows.Forms.DataGridView dgvMostrarUser;
+
+        private System.Windows.Forms.TableLayoutPanel tlpMostrarUsuario;
 
         private System.Windows.Forms.TextBox txt;
 
@@ -566,8 +606,6 @@ namespace BINAES_Proyecto.Forms
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage Mostrar;
-        private System.Windows.Forms.Button btnMostrar;
-        private System.Windows.Forms.DataGridView dgvMostrarUser;
 
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel2;

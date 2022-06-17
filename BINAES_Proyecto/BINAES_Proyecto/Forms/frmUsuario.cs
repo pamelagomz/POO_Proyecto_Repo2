@@ -10,11 +10,6 @@ namespace BINAES_Proyecto.Forms
             InitializeComponent();
         }
         
-        private void btnMostrar_Click(object sender, EventArgs e)
-        {
-            dgvMostrarUser.DataSource = null;
-            dgvMostrarUser.DataSource = UsuarioDAO.MostrarUsuarios();
-        }
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
@@ -30,6 +25,13 @@ namespace BINAES_Proyecto.Forms
             UsuarioDAO.IngresarUsuario(user);
             MessageBox.Show("Ingresado con exito");
             
+        }
+
+
+        private void btnMostrar_Click_1(object sender, EventArgs e)
+        {
+            dgvMostrarUser.DataSource = null;
+            dgvMostrarUser.DataSource = UsuarioDAO.MostrarUsuarios();
         }
     }
 }
