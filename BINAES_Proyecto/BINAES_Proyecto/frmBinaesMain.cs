@@ -65,8 +65,6 @@ namespace BINAES_Proyecto
 
         }
 
-        
-
         private void btnInicio_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);

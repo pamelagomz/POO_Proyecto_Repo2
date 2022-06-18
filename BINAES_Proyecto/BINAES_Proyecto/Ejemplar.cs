@@ -18,12 +18,9 @@ namespace BINAES_Proyecto
         public string issn { get; set; }
         public string doi { get; set; }
         public DateTime fecha { get; set; }
-
         public string editorial { get; set; }
         public string formato { get; set; }
-
         public string idioma { get; set; }
-        
         public string PC { get; set; }
 
     }

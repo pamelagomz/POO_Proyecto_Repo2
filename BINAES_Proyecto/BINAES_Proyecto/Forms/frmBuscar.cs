@@ -79,4 +79,4 @@ namespace BINAES_Proyecto.Forms
             }
         }
     }
-        }
+}
