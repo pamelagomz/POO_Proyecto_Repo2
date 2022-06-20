@@ -83,7 +83,7 @@ namespace BINAES_Proyecto
                         eje.fecha = Convert.ToDateTime(reader["fecha_publicada"].ToString());
                         eje.idioma = reader["iidioma"].ToString();
                         eje.editorial = reader["eeditorial"].ToString();
-                        eje.formato = (reader["fformato"].ToString());
+                        eje.formato = reader["fformato"].ToString();
                         eje.autor = reader["aautor"].ToString();
                         eje.isbn = reader["isbn"].ToString();
                         eje.issn = reader["issn"].ToString();

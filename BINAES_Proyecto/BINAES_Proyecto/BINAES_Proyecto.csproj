@@ -47,9 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Area.cs" />
+    <Compile Include="Autor.cs" />
     <Compile Include="BuscarEjemplarDAO.cs" />
     <Compile Include="Coleccion.cs" />
+    <Compile Include="Editorial.cs" />
     <Compile Include="Ejemplar.cs" />
+    <Compile Include="EjemplarDAO.cs" />
+    <Compile Include="Formato.cs" />
     <Compile Include="Forms\frmBuscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +110,7 @@
     </Compile>
     <Compile Include="Genero.cs" />
     <Compile Include="GeneroDAO.cs" />
+    <Compile Include="Idioma.cs" />
     <Compile Include="PrestamoDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmColeccion.resx">
       <DependentUpon>frmColeccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEjemplar.resx">
+      <DependentUpon>frmEjemplar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>

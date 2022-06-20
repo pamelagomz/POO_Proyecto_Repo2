@@ -42,17 +42,16 @@ namespace BINAES_Proyecto.Forms
 
         private void btnCrearColeccion_Click(object sender, EventArgs e)
         {
-            cmbGenero.Items.Insert(0,"0");
-            
+
             Coleccion col = new Coleccion();
             col.coleccionID = Convert.ToInt32(txtColeID.Text);
             col.coleccionNombre = txtNombreColeccion.Text;
-            col.generoID = Convert.ToInt32(cmbGenero.SelectedIndex);
-            col.tipoID = Convert.ToInt32(cmbTipoColeccion.SelectedIndex);
-            col.areaID = Convert.ToInt32(cmbAreaColeccion.SelectedIndex);
+            col.generoID = Convert.ToInt32(cmbGenero.SelectedValue.ToString());
+            col.tipoID = Convert.ToInt32(cmbTipoColeccion.SelectedValue.ToString());
+            col.areaID = Convert.ToInt32(cmbAreaColeccion.SelectedValue.ToString());
             
             GeneroDAO.IngresarColeccion(col);
-            MessageBox.Show("Ingresado con exito");
+            MessageBox.Show("Ingresado con éxito");
         }
     }
 }
