@@ -14,7 +14,6 @@ namespace BINAES_Proyecto.Forms
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
             Usuario user = new Usuario();
-            user.UsuarioID = Convert.ToInt32(txtUsuarioID.Text);
             user.UsuarioNombre = txtNombreUsuarios.Text;
             user.UserOcupacion = txtOcupacion.Text;
             user.UserDireccion = txtDireccionUsuario.Text;

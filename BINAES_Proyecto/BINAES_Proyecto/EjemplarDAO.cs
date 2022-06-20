@@ -13,11 +13,10 @@ namespace BINAES_Proyecto
             using (SqlConnection connection = new SqlConnection(cadena))
             {
                 string nonquery =
-                    "INSERT INTO EJEMPLAR (id, nombre, fecha_publicada, imagen_portada, id_idioma, id_editorial, id_formato, isbn, issn, doi, id_coleccion)" +
-                    "VALUES (@nuevoid, @nuevonombre, @nuevafecha_publicada, @nuevaimagen_portada, @nuevoid_idioma, @nuevoid_editorial, @nuevoid_formato, @nuevoisbn, @nuevoissn, @nuevodoi, @nuevoid_coleccion)";
+                    "INSERT INTO EJEMPLAR (nombre, fecha_publicada, imagen_portada, id_idioma, id_editorial, id_formato, isbn, issn, doi, id_coleccion)" +
+                    "VALUES (@nuevonombre, @nuevafecha_publicada, @nuevaimagen_portada, @nuevoid_idioma, @nuevoid_editorial, @nuevoid_formato, @nuevoisbn, @nuevoissn, @nuevodoi, @nuevoid_coleccion)";
 
                 SqlCommand command = new SqlCommand(nonquery, connection);
-                command.Parameters.AddWithValue("@nuevoid", ejem.id);
                 command.Parameters.AddWithValue("@nuevonombre", ejem.nombre);
                 command.Parameters.AddWithValue("@nuevafecha_publicada", ejem.fecha);
                 command.Parameters.AddWithValue("@nuevaimagen_portada", ejem.imagen);
@@ -161,7 +160,7 @@ namespace BINAES_Proyecto
 
             return lista;
         }
-
+        
 
 
     }

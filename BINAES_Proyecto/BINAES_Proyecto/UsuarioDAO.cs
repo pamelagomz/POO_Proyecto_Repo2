@@ -14,11 +14,10 @@ namespace BINAES_Proyecto
             using (SqlConnection connection = new SqlConnection(cadena))
             {
                 string nonquery =
-                    "INSERT INTO USUARIO (id, nombre, ocupacion, direccion, correo, telefono, institucion)" +
-                    "VALUES (@nuevoid, @nuevonombre, @nuevaocupacion, @nuevadireccion, @nuevocorreo, @nuevotelefono, @nuevainstitucion)";
+                    "INSERT INTO USUARIO (nombre, ocupacion, direccion, correo, telefono, institucion)" +
+                    "VALUES (@nuevonombre, @nuevaocupacion, @nuevadireccion, @nuevocorreo, @nuevotelefono, @nuevainstitucion)";
 
                 SqlCommand command = new SqlCommand(nonquery, connection);
-                command.Parameters.AddWithValue("@nuevoid", user.UsuarioID);
                 command.Parameters.AddWithValue("@nuevonombre", user.UsuarioNombre);
                 command.Parameters.AddWithValue("@nuevaocupacion", user.UserOcupacion);
                 command.Parameters.AddWithValue("@nuevadireccion", user.UserDireccion);

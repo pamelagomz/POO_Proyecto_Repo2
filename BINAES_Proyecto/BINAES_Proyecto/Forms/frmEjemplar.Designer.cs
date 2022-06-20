@@ -38,7 +38,6 @@ namespace BINAES_Proyecto.Forms
             this.lblNombreEjemplar = new System.Windows.Forms.Label();
             this.txtNombreEjemplar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtpFechaPublicacion = new System.Windows.Forms.DateTimePicker();
             this.lblColeccionEjemplar = new System.Windows.Forms.Label();
             this.lblEditorial = new System.Windows.Forms.Label();
             this.cmbEditorial = new System.Windows.Forms.ComboBox();
@@ -59,22 +58,23 @@ namespace BINAES_Proyecto.Forms
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblPortadaEejmplar = new System.Windows.Forms.Label();
             this.btnCrearEjemplar = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNuevaEditorial = new System.Windows.Forms.TextBox();
             this.lblEditorialNueva = new System.Windows.Forms.Label();
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.lblAutor = new System.Windows.Forms.Label();
             this.btnCrearAutor = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.lblInfoEjemplar = new System.Windows.Forms.Label();
             this.txtFotografia = new System.Windows.Forms.TextBox();
+            this.dtpFechaPublicacion = new System.Windows.Forms.DateTimePicker();
+            this.txtFechaPublicacion = new System.Windows.Forms.TextBox();
+            this.btnCrearEditorial = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.Mostrar = new System.Windows.Forms.TabPage();
             this.tlpMostrarUsuario = new System.Windows.Forms.TableLayoutPanel();
             this.dgvMostrarUser = new System.Windows.Forms.DataGridView();
             this.btnMostrar = new System.Windows.Forms.Button();
-            this.txtFechaPublicacion = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tlpEjemplar.SuspendLayout();
@@ -150,18 +150,18 @@ namespace BINAES_Proyecto.Forms
             this.tlpEjemplar.Controls.Add(this.textBox2, 6, 12);
             this.tlpEjemplar.Controls.Add(this.lblPortadaEejmplar, 1, 13);
             this.tlpEjemplar.Controls.Add(this.btnCrearEjemplar, 6, 13);
-            this.tlpEjemplar.Controls.Add(this.textBox3, 10, 11);
+            this.tlpEjemplar.Controls.Add(this.txtNuevaEditorial, 10, 11);
             this.tlpEjemplar.Controls.Add(this.lblEditorialNueva, 10, 10);
             this.tlpEjemplar.Controls.Add(this.txtAutor, 10, 5);
             this.tlpEjemplar.Controls.Add(this.lblAutor, 10, 4);
             this.tlpEjemplar.Controls.Add(this.btnCrearAutor, 10, 7);
             this.tlpEjemplar.Controls.Add(this.textBox5, 10, 6);
             this.tlpEjemplar.Controls.Add(this.textBox6, 12, 5);
-            this.tlpEjemplar.Controls.Add(this.textBox7, 10, 12);
             this.tlpEjemplar.Controls.Add(this.lblInfoEjemplar, 1, 0);
             this.tlpEjemplar.Controls.Add(this.txtFotografia, 1, 14);
             this.tlpEjemplar.Controls.Add(this.dtpFechaPublicacion, 8, 1);
             this.tlpEjemplar.Controls.Add(this.txtFechaPublicacion, 1, 4);
+            this.tlpEjemplar.Controls.Add(this.btnCrearEditorial, 10, 13);
             this.tlpEjemplar.Location = new System.Drawing.Point(0, 3);
             this.tlpEjemplar.Name = "tlpEjemplar";
             this.tlpEjemplar.RowCount = 16;
@@ -223,15 +223,6 @@ namespace BINAES_Proyecto.Forms
             this.label5.TabIndex = 26;
             this.label5.Text = "Fecha de publicación";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // dtpFechaPublicacion
-            // 
-            this.tlpEjemplar.SetColumnSpan(this.dtpFechaPublicacion, 4);
-            this.dtpFechaPublicacion.CustomFormat = "dd/MM/yyyy";
-            this.dtpFechaPublicacion.Location = new System.Drawing.Point(491, 43);
-            this.dtpFechaPublicacion.Name = "dtpFechaPublicacion";
-            this.dtpFechaPublicacion.Size = new System.Drawing.Size(218, 26);
-            this.dtpFechaPublicacion.TabIndex = 30;
             // 
             // lblColeccionEjemplar
             // 
@@ -450,13 +441,13 @@ namespace BINAES_Proyecto.Forms
             this.btnCrearEjemplar.UseVisualStyleBackColor = false;
             this.btnCrearEjemplar.Click += new System.EventHandler(this.btnCrearEjemplar_Click);
             // 
-            // textBox3
+            // txtNuevaEditorial
             // 
-            this.tlpEjemplar.SetColumnSpan(this.textBox3, 3);
-            this.textBox3.Location = new System.Drawing.Point(613, 443);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 26);
-            this.textBox3.TabIndex = 36;
+            this.tlpEjemplar.SetColumnSpan(this.txtNuevaEditorial, 3);
+            this.txtNuevaEditorial.Location = new System.Drawing.Point(613, 443);
+            this.txtNuevaEditorial.Name = "txtNuevaEditorial";
+            this.txtNuevaEditorial.Size = new System.Drawing.Size(157, 26);
+            this.txtNuevaEditorial.TabIndex = 36;
             // 
             // lblEditorialNueva
             // 
@@ -523,15 +514,6 @@ namespace BINAES_Proyecto.Forms
             this.textBox6.Size = new System.Drawing.Size(120, 26);
             this.textBox6.TabIndex = 38;
             // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpEjemplar.SetColumnSpan(this.textBox7, 2);
-            this.textBox7.Location = new System.Drawing.Point(613, 484);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(116, 26);
-            this.textBox7.TabIndex = 39;
-            // 
             // lblInfoEjemplar
             // 
             this.lblInfoEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
@@ -550,6 +532,38 @@ namespace BINAES_Proyecto.Forms
             this.txtFotografia.Name = "txtFotografia";
             this.txtFotografia.Size = new System.Drawing.Size(162, 26);
             this.txtFotografia.TabIndex = 40;
+            // 
+            // dtpFechaPublicacion
+            // 
+            this.tlpEjemplar.SetColumnSpan(this.dtpFechaPublicacion, 4);
+            this.dtpFechaPublicacion.CustomFormat = "dd/MM/yyyy";
+            this.dtpFechaPublicacion.Location = new System.Drawing.Point(491, 43);
+            this.dtpFechaPublicacion.Name = "dtpFechaPublicacion";
+            this.dtpFechaPublicacion.Size = new System.Drawing.Size(218, 26);
+            this.dtpFechaPublicacion.TabIndex = 30;
+            // 
+            // txtFechaPublicacion
+            // 
+            this.tlpEjemplar.SetColumnSpan(this.txtFechaPublicacion, 3);
+            this.txtFechaPublicacion.Location = new System.Drawing.Point(64, 163);
+            this.txtFechaPublicacion.Name = "txtFechaPublicacion";
+            this.txtFechaPublicacion.Size = new System.Drawing.Size(162, 26);
+            this.txtFechaPublicacion.TabIndex = 41;
+            // 
+            // btnCrearEditorial
+            // 
+            this.btnCrearEditorial.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrearEditorial.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.tlpEjemplar.SetColumnSpan(this.btnCrearEditorial, 3);
+            this.btnCrearEditorial.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnCrearEditorial.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCrearEditorial.Location = new System.Drawing.Point(613, 522);
+            this.btnCrearEditorial.Name = "btnCrearEditorial";
+            this.btnCrearEditorial.Size = new System.Drawing.Size(177, 34);
+            this.btnCrearEditorial.TabIndex = 42;
+            this.btnCrearEditorial.Text = "Crear Editorial";
+            this.btnCrearEditorial.UseVisualStyleBackColor = false;
+            this.btnCrearEditorial.Click += new System.EventHandler(this.btnCrearEditorial_Click);
             // 
             // tabPage4
             // 
@@ -579,7 +593,7 @@ namespace BINAES_Proyecto.Forms
             this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.93578F));
             this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.06422F));
             this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 208F));
-            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tlpMostrarUsuario.Controls.Add(this.dgvMostrarUser, 1, 2);
             this.tlpMostrarUsuario.Controls.Add(this.btnMostrar, 2, 0);
             this.tlpMostrarUsuario.Location = new System.Drawing.Point(3, 3);
@@ -598,11 +612,11 @@ namespace BINAES_Proyecto.Forms
             this.dgvMostrarUser.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMostrarUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tlpMostrarUsuario.SetColumnSpan(this.dgvMostrarUser, 2);
-            this.dgvMostrarUser.Location = new System.Drawing.Point(123, 99);
+            this.dgvMostrarUser.Location = new System.Drawing.Point(122, 99);
             this.dgvMostrarUser.Name = "dgvMostrarUser";
             this.dgvMostrarUser.RowHeadersWidth = 62;
             this.dgvMostrarUser.RowTemplate.Height = 28;
-            this.dgvMostrarUser.Size = new System.Drawing.Size(607, 438);
+            this.dgvMostrarUser.Size = new System.Drawing.Size(605, 438);
             this.dgvMostrarUser.TabIndex = 0;
             // 
             // btnMostrar
@@ -611,20 +625,12 @@ namespace BINAES_Proyecto.Forms
             this.btnMostrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnMostrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMostrar.Location = new System.Drawing.Point(528, 3);
+            this.btnMostrar.Location = new System.Drawing.Point(525, 3);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(202, 54);
             this.btnMostrar.TabIndex = 1;
             this.btnMostrar.Text = "Mostrar Usuarios";
             this.btnMostrar.UseVisualStyleBackColor = false;
-            // 
-            // txtFechaPublicacion
-            // 
-            this.tlpEjemplar.SetColumnSpan(this.txtFechaPublicacion, 3);
-            this.txtFechaPublicacion.Location = new System.Drawing.Point(64, 163);
-            this.txtFechaPublicacion.Name = "txtFechaPublicacion";
-            this.txtFechaPublicacion.Size = new System.Drawing.Size(162, 26);
-            this.txtFechaPublicacion.TabIndex = 41;
             // 
             // frmEjemplar
             // 
@@ -645,14 +651,14 @@ namespace BINAES_Proyecto.Forms
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.Button btnCrearEditorial;
+
         private System.Windows.Forms.TextBox txtFechaPublicacion;
 
         private System.Windows.Forms.TextBox txtFotografia;
 
-        private System.Windows.Forms.TextBox textBox7;
-
         private System.Windows.Forms.Label lblEditorialNueva;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNuevaEditorial;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
 

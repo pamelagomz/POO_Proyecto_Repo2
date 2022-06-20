@@ -36,7 +36,6 @@ namespace BINAES_Proyecto.Forms
         private void btnCrearEjemplar_Click(object sender, EventArgs e)
         {
             Ejemplar ejem = new Ejemplar();
-            ejem.id = Convert.ToInt32(txtEjemplarID.Text);
             ejem.nombre = txtNombreEjemplar.Text;
             ejem.fecha = Convert.ToDateTime(txtFechaPublicacion.Text);
             ejem.coleccion = cmbColeccionEjemplar.SelectedValue.ToString();
@@ -51,6 +50,16 @@ namespace BINAES_Proyecto.Forms
             
             EjemplarDAO.IngresarEjemplar(ejem);
             MessageBox.Show("Ingresado con éxito");
+        }
+
+        private void btnCrearEditorial_Click(object sender, EventArgs e)
+        {
+            Editorial edit = new Editorial();
+            edit.nombreEditorial = txtNuevaEditorial.Text;
+            
+            EditorialDAO.InsertarNuevaEditorial(edit);
+            MessageBox.Show("Editorial ingresada con éxito");
+            Update();
         }
     }
 }

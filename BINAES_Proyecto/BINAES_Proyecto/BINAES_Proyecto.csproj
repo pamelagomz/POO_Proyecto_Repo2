@@ -51,6 +51,7 @@
     <Compile Include="BuscarEjemplarDAO.cs" />
     <Compile Include="Coleccion.cs" />
     <Compile Include="Editorial.cs" />
+    <Compile Include="EditorialDAO.cs" />
     <Compile Include="Ejemplar.cs" />
     <Compile Include="EjemplarDAO.cs" />
     <Compile Include="Formato.cs" />

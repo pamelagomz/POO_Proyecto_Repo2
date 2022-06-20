@@ -105,11 +105,10 @@ namespace BINAES_Proyecto
             using (SqlConnection connection = new SqlConnection(cadena))
             {
                 string nonquery =
-                    "INSERT INTO COLECCION (id, nombre, id_genero, id_tipo, id_area)" +
-                    "VALUES (@nuevoid, @nuevonombre, @id_genero, @id_tipo, @id_area)";
+                    "INSERT INTO COLECCION (nombre, id_genero, id_tipo, id_area)" +
+                    "VALUES (@nuevonombre, @id_genero, @id_tipo, @id_area)";
 
                 SqlCommand command = new SqlCommand(nonquery, connection);
-                command.Parameters.AddWithValue("@nuevoid", col.coleccionID);
                 command.Parameters.AddWithValue("@nuevonombre", col.coleccionNombre);
                 command.Parameters.AddWithValue("@id_genero", col.generoID);
                 command.Parameters.AddWithValue("@id_tipo", col.tipoID);

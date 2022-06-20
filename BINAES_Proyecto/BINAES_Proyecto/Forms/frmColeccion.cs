@@ -44,7 +44,6 @@ namespace BINAES_Proyecto.Forms
         {
 
             Coleccion col = new Coleccion();
-            col.coleccionID = Convert.ToInt32(txtColeID.Text);
             col.coleccionNombre = txtNombreColeccion.Text;
             col.generoID = Convert.ToInt32(cmbGenero.SelectedValue.ToString());
             col.tipoID = Convert.ToInt32(cmbTipoColeccion.SelectedValue.ToString());
