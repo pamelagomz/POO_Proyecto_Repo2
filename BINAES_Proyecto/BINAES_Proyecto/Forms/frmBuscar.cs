@@ -78,5 +78,10 @@ namespace BINAES_Proyecto.Forms
                 dgvResultadosBusqueda.DataSource = resultado;
             }
         }
+
+        private void tlpBuscar_Paint(object sender, PaintEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
