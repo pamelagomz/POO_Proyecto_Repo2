@@ -53,9 +53,9 @@ namespace BINAES_Proyecto.Forms
             this.lblDoi = new System.Windows.Forms.Label();
             this.txtDoi = new System.Windows.Forms.TextBox();
             this.lblPalabrasClaves = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPalabraClave1 = new System.Windows.Forms.TextBox();
+            this.txtPalabraClave2 = new System.Windows.Forms.TextBox();
+            this.txtPalabraClave3 = new System.Windows.Forms.TextBox();
             this.lblPortadaEejmplar = new System.Windows.Forms.Label();
             this.btnCrearEjemplar = new System.Windows.Forms.Button();
             this.txtNuevaEditorial = new System.Windows.Forms.TextBox();
@@ -145,9 +145,9 @@ namespace BINAES_Proyecto.Forms
             this.tlpEjemplar.Controls.Add(this.lblDoi, 6, 7);
             this.tlpEjemplar.Controls.Add(this.txtDoi, 6, 8);
             this.tlpEjemplar.Controls.Add(this.lblPalabrasClaves, 6, 9);
-            this.tlpEjemplar.Controls.Add(this.textBox4, 6, 10);
-            this.tlpEjemplar.Controls.Add(this.textBox1, 6, 11);
-            this.tlpEjemplar.Controls.Add(this.textBox2, 6, 12);
+            this.tlpEjemplar.Controls.Add(this.txtPalabraClave1, 6, 10);
+            this.tlpEjemplar.Controls.Add(this.txtPalabraClave2, 6, 11);
+            this.tlpEjemplar.Controls.Add(this.txtPalabraClave3, 6, 12);
             this.tlpEjemplar.Controls.Add(this.lblPortadaEejmplar, 1, 13);
             this.tlpEjemplar.Controls.Add(this.btnCrearEjemplar, 6, 13);
             this.tlpEjemplar.Controls.Add(this.txtNuevaEditorial, 10, 11);
@@ -387,32 +387,32 @@ namespace BINAES_Proyecto.Forms
             this.lblPalabrasClaves.Text = "Palabras Claves";
             this.lblPalabrasClaves.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // textBox4
+            // txtPalabraClave1
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpEjemplar.SetColumnSpan(this.textBox4, 3);
-            this.textBox4.Location = new System.Drawing.Point(369, 403);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(177, 26);
-            this.textBox4.TabIndex = 24;
+            this.txtPalabraClave1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpEjemplar.SetColumnSpan(this.txtPalabraClave1, 3);
+            this.txtPalabraClave1.Location = new System.Drawing.Point(369, 403);
+            this.txtPalabraClave1.Name = "txtPalabraClave1";
+            this.txtPalabraClave1.Size = new System.Drawing.Size(177, 26);
+            this.txtPalabraClave1.TabIndex = 24;
             // 
-            // textBox1
+            // txtPalabraClave2
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpEjemplar.SetColumnSpan(this.textBox1, 3);
-            this.textBox1.Location = new System.Drawing.Point(369, 443);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 26);
-            this.textBox1.TabIndex = 28;
+            this.txtPalabraClave2.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpEjemplar.SetColumnSpan(this.txtPalabraClave2, 3);
+            this.txtPalabraClave2.Location = new System.Drawing.Point(369, 443);
+            this.txtPalabraClave2.Name = "txtPalabraClave2";
+            this.txtPalabraClave2.Size = new System.Drawing.Size(177, 26);
+            this.txtPalabraClave2.TabIndex = 28;
             // 
-            // textBox2
+            // txtPalabraClave3
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpEjemplar.SetColumnSpan(this.textBox2, 3);
-            this.textBox2.Location = new System.Drawing.Point(369, 484);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 26);
-            this.textBox2.TabIndex = 29;
+            this.txtPalabraClave3.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpEjemplar.SetColumnSpan(this.txtPalabraClave3, 3);
+            this.txtPalabraClave3.Location = new System.Drawing.Point(369, 484);
+            this.txtPalabraClave3.Name = "txtPalabraClave3";
+            this.txtPalabraClave3.Size = new System.Drawing.Size(177, 26);
+            this.txtPalabraClave3.TabIndex = 29;
             // 
             // lblPortadaEejmplar
             // 
@@ -593,7 +593,7 @@ namespace BINAES_Proyecto.Forms
             this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.93578F));
             this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.06422F));
             this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 208F));
-            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tlpMostrarUsuario.Controls.Add(this.dgvMostrarUser, 1, 2);
             this.tlpMostrarUsuario.Controls.Add(this.btnMostrar, 2, 0);
             this.tlpMostrarUsuario.Location = new System.Drawing.Point(3, 3);
@@ -616,7 +616,7 @@ namespace BINAES_Proyecto.Forms
             this.dgvMostrarUser.Name = "dgvMostrarUser";
             this.dgvMostrarUser.RowHeadersWidth = 62;
             this.dgvMostrarUser.RowTemplate.Height = 28;
-            this.dgvMostrarUser.Size = new System.Drawing.Size(605, 438);
+            this.dgvMostrarUser.Size = new System.Drawing.Size(603, 438);
             this.dgvMostrarUser.TabIndex = 0;
             // 
             // btnMostrar
@@ -625,7 +625,7 @@ namespace BINAES_Proyecto.Forms
             this.btnMostrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnMostrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMostrar.Location = new System.Drawing.Point(525, 3);
+            this.btnMostrar.Location = new System.Drawing.Point(523, 3);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(202, 54);
             this.btnMostrar.TabIndex = 1;
@@ -672,8 +672,8 @@ namespace BINAES_Proyecto.Forms
 
         private System.Windows.Forms.DateTimePicker dtpFechaPublicacion;
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPalabraClave2;
+        private System.Windows.Forms.TextBox txtPalabraClave3;
 
         private System.Windows.Forms.ComboBox cmbIdioma;
 
@@ -700,7 +700,7 @@ namespace BINAES_Proyecto.Forms
         private System.Windows.Forms.Label lblFormato;
         private System.Windows.Forms.TextBox txtissn;
         private System.Windows.Forms.TextBox txtDoi;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPalabraClave1;
         private System.Windows.Forms.Label lblPalabrasClaves;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage Mostrar;

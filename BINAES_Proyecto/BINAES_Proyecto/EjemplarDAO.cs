@@ -35,7 +35,72 @@ namespace BINAES_Proyecto
                 command.ExecuteNonQuery();
                 connection.Close();
             }
+            
+            Palabras_Clave PalabrasClave= new Palabras_Clave(ejem.PC,EjemplarDAO.nuevoidEejmplar());
+            InsertarNuevaPalabraClave(PalabrasClave);
+            
+            
 
+        }
+
+        public static int nuevoidEejmplar()
+        {
+            string cadena = Resources.Cadena_Conexion;
+            int nuevoidEjemplar = 0;
+
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "SELECT id FROM EJEMPLAR WHERE EJEMPLAR.id = IDENT_CURRENT('EJEMPLAR')";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Ejemplar ejem = new Ejemplar();
+                        ejem.id = Convert.ToInt32(reader["id"].ToString());
+
+                        nuevoidEjemplar = ejem.id;
+                        
+                        
+                    }
+                }
+
+                connection.Close();
+                
+            }
+
+            return nuevoidEjemplar;
+        }
+        
+        
+        
+        
+        //Crear nueva palabra clave 
+        public static void InsertarNuevaPalabraClave(Palabras_Clave pc)
+        {
+            string cadena = Resources.Cadena_Conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string nonquery =
+                    "INSERT INTO PALABRAS_CLAVE (palabra, id_ejemplar)" +
+                    "VALUES (@palabra, @ejemplarID_Palabra)";
+
+                SqlCommand command = new SqlCommand(nonquery, connection);
+                command.Parameters.AddWithValue("@palabra", pc.palabra);
+                command.Parameters.AddWithValue("@ejemplarID_Palabra", pc.ejemplarID_Palabra);
+                
+                
+                
+              
+                    
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            
         }
 
 //Llenando los combo box 

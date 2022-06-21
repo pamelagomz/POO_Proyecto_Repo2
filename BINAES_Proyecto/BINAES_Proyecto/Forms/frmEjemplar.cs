@@ -46,16 +46,21 @@ namespace BINAES_Proyecto.Forms
             ejem.isbn = txtIsbn.Text;
             ejem.issn = txtissn.Text;
             ejem.doi = txtDoi.Text;
+            ejem.PC = txtPalabraClave1.Text;
+            ejem.PC = txtPalabraClave2.Text;
+            ejem.PC = txtPalabraClave3.Text;
             
             
             EjemplarDAO.IngresarEjemplar(ejem);
             MessageBox.Show("Ingresado con éxito");
         }
+        
 
         private void btnCrearEditorial_Click(object sender, EventArgs e)
         {
             Editorial edit = new Editorial();
             edit.nombreEditorial = txtNuevaEditorial.Text;
+            
             
             EditorialDAO.InsertarNuevaEditorial(edit);
             MessageBox.Show("Editorial ingresada con éxito");

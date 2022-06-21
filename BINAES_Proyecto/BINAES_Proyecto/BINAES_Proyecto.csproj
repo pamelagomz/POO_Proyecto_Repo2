@@ -112,6 +112,7 @@
     <Compile Include="Genero.cs" />
     <Compile Include="GeneroDAO.cs" />
     <Compile Include="Idioma.cs" />
+    <Compile Include="Palabras_Clave.cs" />
     <Compile Include="PrestamoDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
