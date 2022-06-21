@@ -60,3 +60,5 @@ C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debu
 C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmPrestamo.resources
 C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmPrestamo.resources
 C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmEjemplar.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmEjemplar.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmPrestamo.resources
