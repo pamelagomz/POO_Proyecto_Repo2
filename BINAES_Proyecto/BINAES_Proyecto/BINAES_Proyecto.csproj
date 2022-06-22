@@ -49,7 +49,7 @@
     <Compile Include="Area.cs" />
     <Compile Include="Autor.cs" />
     <Compile Include="BuscarEjemplarDAO.cs" />
-    <Compile Include="BuscarEventoDAO.cs" />
+    <Compile Include="EventoDAO.cs" />
     <Compile Include="Coleccion.cs" />
     <Compile Include="Editorial.cs" />
     <Compile Include="EditorialDAO.cs" />
@@ -120,6 +120,7 @@
     <Compile Include="Genero.cs" />
     <Compile Include="GeneroDAO.cs" />
     <Compile Include="Idioma.cs" />
+    <Compile Include="Objetivos.cs" />
     <Compile Include="Palabras_Clave.cs" />
     <Compile Include="PrestamoDAO.cs" />
     <Compile Include="Program.cs" />

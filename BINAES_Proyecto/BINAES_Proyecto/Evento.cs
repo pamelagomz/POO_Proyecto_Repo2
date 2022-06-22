@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,12 @@ namespace BINAES_Proyecto
     {
         public int ID { get; set; }
         
+        public int id_area { get; set; }
         public string Titulo_Evento { get; set; }
         
         public string Portada { get; set; }
+        
+        public Bitmap Imagen_del_evento { get; set; }
         
         public int Cantidad_de_asistentes { get; set; }
         
@@ -25,6 +29,7 @@ namespace BINAES_Proyecto
         public string Area { get; set; }
         
         public string Objetivos { get; set; }
+        
         
         
 
