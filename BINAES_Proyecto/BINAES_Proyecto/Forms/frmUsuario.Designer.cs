@@ -65,6 +65,30 @@ namespace BINAES_Proyecto.Forms
             this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.btnGenerarQR = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.btnEliminarUsuario = new System.Windows.Forms.Button();
+            this.txtIdEliminar = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtIDatualizar = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btnActualizarUsuario = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtActualizarOcupacion = new System.Windows.Forms.TextBox();
+            this.txtActualizarCorreo = new System.Windows.Forms.TextBox();
+            this.txtActualizarInstitucion = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtActualizarNombre = new System.Windows.Forms.TextBox();
+            this.txtActualizarTelefono = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtActualizarDireccion = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.Mostrar = new System.Windows.Forms.TabPage();
             this.tlpMostrarUsuario = new System.Windows.Forms.TableLayoutPanel();
             this.dgvMostrarUser = new System.Windows.Forms.DataGridView();
@@ -76,6 +100,10 @@ namespace BINAES_Proyecto.Forms
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.Mostrar.SuspendLayout();
             this.tlpMostrarUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dgvMostrarUser)).BeginInit();
@@ -479,6 +507,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.tableLayoutPanel4);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -486,6 +515,300 @@ namespace BINAES_Proyecto.Forms
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Editar Usuario";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.ColumnCount = 14;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.158185F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.158187F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
+            this.tableLayoutPanel4.Controls.Add(this.panel3, 1, 12);
+            this.tableLayoutPanel4.Controls.Add(this.panel4, 1, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(1, 2);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 16;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.018518F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.777778F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.864198F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.03086F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(791, 648);
+            this.tableLayoutPanel4.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel4.SetColumnSpan(this.panel3, 13);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.btnEliminarUsuario);
+            this.panel3.Controls.Add(this.txtIdEliminar);
+            this.panel3.Location = new System.Drawing.Point(59, 482);
+            this.panel3.Name = "panel3";
+            this.tableLayoutPanel4.SetRowSpan(this.panel3, 4);
+            this.panel3.Size = new System.Drawing.Size(715, 147);
+            this.panel3.TabIndex = 22;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label21.Location = new System.Drawing.Point(37, 40);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(364, 42);
+            this.label21.TabIndex = 21;
+            this.label21.Text = "Ingrese el numero de id del usuario a eliminar";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label20.Location = new System.Drawing.Point(239, 2);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(832, 38);
+            this.label20.TabIndex = 20;
+            this.label20.Text = "Eliminar usuario";
+            // 
+            // btnEliminarUsuario
+            // 
+            this.btnEliminarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarUsuario.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.btnEliminarUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnEliminarUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(480, 49);
+            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(145, 47);
+            this.btnEliminarUsuario.TabIndex = 16;
+            this.btnEliminarUsuario.Text = "Eliminar";
+            this.btnEliminarUsuario.UseVisualStyleBackColor = false;
+            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click_1);
+            // 
+            // txtIdEliminar
+            // 
+            this.txtIdEliminar.Location = new System.Drawing.Point(200, 97);
+            this.txtIdEliminar.Name = "txtIdEliminar";
+            this.txtIdEliminar.Size = new System.Drawing.Size(48, 26);
+            this.txtIdEliminar.TabIndex = 19;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel4.SetColumnSpan(this.panel4, 13);
+            this.panel4.Controls.Add(this.label22);
+            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.txtIDatualizar);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Controls.Add(this.btnActualizarUsuario);
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.txtActualizarOcupacion);
+            this.panel4.Controls.Add(this.txtActualizarCorreo);
+            this.panel4.Controls.Add(this.txtActualizarInstitucion);
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.txtActualizarNombre);
+            this.panel4.Controls.Add(this.txtActualizarTelefono);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.label19);
+            this.panel4.Controls.Add(this.txtActualizarDireccion);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Location = new System.Drawing.Point(59, 43);
+            this.panel4.Name = "panel4";
+            this.tableLayoutPanel4.SetRowSpan(this.panel4, 10);
+            this.panel4.Size = new System.Drawing.Size(715, 394);
+            this.panel4.TabIndex = 23;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label22.Location = new System.Drawing.Point(371, 78);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(42, 38);
+            this.label22.TabIndex = 20;
+            this.label22.Text = "ID";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label17.Location = new System.Drawing.Point(356, -1);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(300, 77);
+            this.label17.TabIndex = 19;
+            this.label17.Text = "Ingrese el numero de ID del usuario que desea actualizar ";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // txtIDatualizar
+            // 
+            this.txtIDatualizar.Location = new System.Drawing.Point(419, 82);
+            this.txtIDatualizar.Name = "txtIDatualizar";
+            this.txtIDatualizar.Size = new System.Drawing.Size(36, 26);
+            this.txtIDatualizar.TabIndex = 18;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label15.Location = new System.Drawing.Point(19, 127);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(101, 36);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Direccion";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // btnActualizarUsuario
+            // 
+            this.btnActualizarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizarUsuario.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.btnActualizarUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnActualizarUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnActualizarUsuario.Location = new System.Drawing.Point(464, 304);
+            this.btnActualizarUsuario.Name = "btnActualizarUsuario";
+            this.btnActualizarUsuario.Size = new System.Drawing.Size(160, 71);
+            this.btnActualizarUsuario.TabIndex = 17;
+            this.btnActualizarUsuario.Text = "Actualizar";
+            this.btnActualizarUsuario.UseVisualStyleBackColor = false;
+            this.btnActualizarUsuario.Click += new System.EventHandler(this.btnActualizarUsuario_Click_1);
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label18.Location = new System.Drawing.Point(19, 276);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(216, 40);
+            this.label18.TabIndex = 10;
+            this.label18.Text = "Institucion";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label16.Location = new System.Drawing.Point(371, 203);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(223, 35);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "Telefono";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // txtActualizarOcupacion
+            // 
+            this.txtActualizarOcupacion.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtActualizarOcupacion.Location = new System.Drawing.Point(19, 247);
+            this.txtActualizarOcupacion.Name = "txtActualizarOcupacion";
+            this.txtActualizarOcupacion.Size = new System.Drawing.Size(272, 26);
+            this.txtActualizarOcupacion.TabIndex = 8;
+            // 
+            // txtActualizarCorreo
+            // 
+            this.txtActualizarCorreo.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtActualizarCorreo.Location = new System.Drawing.Point(371, 166);
+            this.txtActualizarCorreo.Name = "txtActualizarCorreo";
+            this.txtActualizarCorreo.Size = new System.Drawing.Size(272, 26);
+            this.txtActualizarCorreo.TabIndex = 11;
+            // 
+            // txtActualizarInstitucion
+            // 
+            this.txtActualizarInstitucion.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtActualizarInstitucion.Location = new System.Drawing.Point(19, 328);
+            this.txtActualizarInstitucion.Name = "txtActualizarInstitucion";
+            this.txtActualizarInstitucion.Size = new System.Drawing.Size(272, 26);
+            this.txtActualizarInstitucion.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label12.Location = new System.Drawing.Point(38, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(160, 28);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Editar usuario";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtActualizarNombre
+            // 
+            this.txtActualizarNombre.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtActualizarNombre.Location = new System.Drawing.Point(19, 92);
+            this.txtActualizarNombre.Name = "txtActualizarNombre";
+            this.txtActualizarNombre.Size = new System.Drawing.Size(272, 26);
+            this.txtActualizarNombre.TabIndex = 2;
+            // 
+            // txtActualizarTelefono
+            // 
+            this.txtActualizarTelefono.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtActualizarTelefono.Location = new System.Drawing.Point(371, 247);
+            this.txtActualizarTelefono.Name = "txtActualizarTelefono";
+            this.txtActualizarTelefono.Size = new System.Drawing.Size(272, 26);
+            this.txtActualizarTelefono.TabIndex = 15;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label13.Location = new System.Drawing.Point(19, 56);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(216, 33);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Nombre y apellido";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label19.Location = new System.Drawing.Point(371, 127);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(216, 36);
+            this.label19.TabIndex = 14;
+            this.label19.Text = "Correo Electronico";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // txtActualizarDireccion
+            // 
+            this.txtActualizarDireccion.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtActualizarDireccion.Location = new System.Drawing.Point(19, 166);
+            this.txtActualizarDireccion.Name = "txtActualizarDireccion";
+            this.txtActualizarDireccion.Size = new System.Drawing.Size(272, 26);
+            this.txtActualizarDireccion.TabIndex = 6;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label14.Location = new System.Drawing.Point(19, 195);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(216, 43);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Ocupacion";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // Mostrar
             // 
@@ -505,7 +828,7 @@ namespace BINAES_Proyecto.Forms
             this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.93578F));
             this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.06422F));
             this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 208F));
-            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.tlpMostrarUsuario.Controls.Add(this.dgvMostrarUser, 1, 2);
             this.tlpMostrarUsuario.Controls.Add(this.btnMostrar, 2, 0);
             this.tlpMostrarUsuario.Location = new System.Drawing.Point(3, 3);
@@ -524,10 +847,10 @@ namespace BINAES_Proyecto.Forms
             this.dgvMostrarUser.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMostrarUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tlpMostrarUsuario.SetColumnSpan(this.dgvMostrarUser, 2);
-            this.dgvMostrarUser.Location = new System.Drawing.Point(110, 99);
+            this.dgvMostrarUser.Location = new System.Drawing.Point(109, 99);
             this.dgvMostrarUser.Name = "dgvMostrarUser";
             this.dgvMostrarUser.RowTemplate.Height = 28;
-            this.dgvMostrarUser.Size = new System.Drawing.Size(562, 438);
+            this.dgvMostrarUser.Size = new System.Drawing.Size(560, 438);
             this.dgvMostrarUser.TabIndex = 0;
             // 
             // btnMostrar
@@ -536,7 +859,7 @@ namespace BINAES_Proyecto.Forms
             this.btnMostrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnMostrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMostrar.Location = new System.Drawing.Point(470, 3);
+            this.btnMostrar.Location = new System.Drawing.Point(467, 3);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(202, 54);
             this.btnMostrar.TabIndex = 1;
@@ -562,11 +885,42 @@ namespace BINAES_Proyecto.Forms
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.Mostrar.ResumeLayout(false);
             this.tlpMostrarUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dgvMostrarUser)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnEliminarUsuario;
+        private System.Windows.Forms.TextBox txtIdEliminar;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtIDatualizar;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnActualizarUsuario;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtActualizarOcupacion;
+        private System.Windows.Forms.TextBox txtActualizarCorreo;
+        private System.Windows.Forms.TextBox txtActualizarInstitucion;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtActualizarNombre;
+        private System.Windows.Forms.TextBox txtActualizarTelefono;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtActualizarDireccion;
+        private System.Windows.Forms.Label label14;
 
         private System.Windows.Forms.Button btnGuardarQR;
         private System.Windows.Forms.Button btnGenerarQR;

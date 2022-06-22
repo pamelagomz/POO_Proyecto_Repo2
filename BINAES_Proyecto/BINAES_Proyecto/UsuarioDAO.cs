@@ -77,5 +77,58 @@ namespace BINAES_Proyecto
 
             return ListaUsuarios;
         }
+        
+        public static bool EliminarUsuario(int id)
+        {
+            bool exito = true;
+
+            try
+            {
+                string cadena = Resources.Cadena_Conexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query = "DELETE FROM USUARIO WHERE id = @id";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    command.Parameters.AddWithValue("@id", id);
+                    
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+            }
+            catch(Exception)
+            {
+                exito = false;
+            }
+
+            return exito;
+        }
+
+        public static void ActualizarUsuario(Usuario user)
+        {
+            string cadena = Resources.Cadena_Conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string noquery =
+                    "UPDATE USUARIO SET nombre = @nuevonombre, ocupacion = @nuevaocupacion, direccion = @nuevadireccion, correo = @nuevocorreo, telefono = @nuevotelefono, institucion = @nuevainstitucin  " +
+                    "WHERE id = @id";
+
+                SqlCommand command = new SqlCommand(noquery, connection);
+                command.Parameters.AddWithValue("@nuevonombre", user.UsuarioNombre);
+                command.Parameters.AddWithValue("@nuevaocupacion", user.UserOcupacion);
+                command.Parameters.AddWithValue("@nuevadireccion", user.UserDireccion);
+                command.Parameters.AddWithValue("@nuevocorreo", user.UserCorreo);
+                command.Parameters.AddWithValue("@nuevotelefono", user.UserTelefono);
+                command.Parameters.AddWithValue("@nuevainstitucin", user.UserInstitucion);
+                command.Parameters.AddWithValue("@id", user.UsuarioID);
+                
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
+        }
     }
 }
