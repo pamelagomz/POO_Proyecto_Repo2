@@ -49,11 +49,13 @@
     <Compile Include="Area.cs" />
     <Compile Include="Autor.cs" />
     <Compile Include="BuscarEjemplarDAO.cs" />
+    <Compile Include="BuscarEventoDAO.cs" />
     <Compile Include="Coleccion.cs" />
     <Compile Include="Editorial.cs" />
     <Compile Include="EditorialDAO.cs" />
     <Compile Include="Ejemplar.cs" />
     <Compile Include="EjemplarDAO.cs" />
+    <Compile Include="Evento.cs" />
     <Compile Include="Formato.cs" />
     <Compile Include="Forms\frmBuscar.cs">
       <SubType>Form</SubType>
@@ -109,6 +111,12 @@
     <Compile Include="frmBinaesMain.Designer.cs">
       <DependentUpon>frmBinaesMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicioSesion.Designer.cs">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Genero.cs" />
     <Compile Include="GeneroDAO.cs" />
     <Compile Include="Idioma.cs" />
@@ -128,6 +136,9 @@
     <EmbeddedResource Include="Forms\frmEjemplar.resx">
       <DependentUpon>frmEjemplar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEvento.resx">
+      <DependentUpon>frmEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBinaesMain.resx">
       <DependentUpon>frmBinaesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicioSesion.resx">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

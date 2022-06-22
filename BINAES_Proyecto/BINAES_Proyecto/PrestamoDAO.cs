@@ -33,8 +33,8 @@ namespace BINAES_Proyecto
                         while (reader.Read())
                         {
                             eje = new Ejemplar();
-                            eje.id = Convert.ToInt32(reader["id"].ToString());
-                            eje.nombre = reader["nombre"].ToString();
+                            eje.ID = Convert.ToInt32(reader["id"].ToString());
+                            eje.Nombre_Ejemplar = reader["nombre"].ToString();
                         }
                     }
 
@@ -77,19 +77,19 @@ namespace BINAES_Proyecto
                     while (reader.Read())
                     {
                         eje = new Ejemplar();
-                        eje.imagen = reader["imagen_portada"].ToString();
-                        eje.id = Convert.ToInt32(reader["id"].ToString());
-                        eje.nombre = reader["nombre"].ToString();
-                        eje.fecha = Convert.ToDateTime(reader["fecha_publicada"].ToString());
-                        eje.idioma = reader["iidioma"].ToString();
-                        eje.editorial = reader["eeditorial"].ToString();
-                        eje.formato = reader["fformato"].ToString();
-                        eje.autor = reader["aautor"].ToString();
-                        eje.isbn = reader["isbn"].ToString();
-                        eje.issn = reader["issn"].ToString();
-                        eje.doi = reader["doi"].ToString();
-                        eje.coleccion = reader["cnombre"].ToString();
-                        eje.PC = reader["Palabras_clave"].ToString();
+                        eje.Portada = reader["imagen_portada"].ToString();
+                        eje.ID = Convert.ToInt32(reader["id"].ToString());
+                        eje.Nombre_Ejemplar = reader["nombre"].ToString();
+                        eje.Fecha_de_publicacion = Convert.ToDateTime(reader["fecha_publicada"].ToString());
+                        eje.Idioma = reader["iidioma"].ToString();
+                        eje.Editorial = reader["eeditorial"].ToString();
+                        eje.Formato = reader["fformato"].ToString();
+                        eje.Autor = reader["aautor"].ToString();
+                        eje.ISBN = reader["isbn"].ToString();
+                        eje.ISSN = reader["issn"].ToString();
+                        eje.DOI = reader["doi"].ToString();
+                        eje.Coleccion = reader["cnombre"].ToString();
+                        eje.Palabras_clave = reader["Palabras_clave"].ToString();
                     }
                 }
                 connection.Close();

@@ -17,16 +17,16 @@ namespace BINAES_Proyecto
                     "VALUES (@nuevonombre, @nuevafecha_publicada, @nuevaimagen_portada, @nuevoid_idioma, @nuevoid_editorial, @nuevoid_formato, @nuevoisbn, @nuevoissn, @nuevodoi, @nuevoid_coleccion)";
 
                 SqlCommand command = new SqlCommand(nonquery, connection);
-                command.Parameters.AddWithValue("@nuevonombre", ejem.nombre);
-                command.Parameters.AddWithValue("@nuevafecha_publicada", ejem.fecha);
-                command.Parameters.AddWithValue("@nuevaimagen_portada", ejem.imagen);
-                command.Parameters.AddWithValue("@nuevoid_idioma", ejem.idioma);
-                command.Parameters.AddWithValue("@nuevoid_editorial", ejem.editorial);
-                command.Parameters.AddWithValue("@nuevoid_formato", ejem.formato);
-                command.Parameters.AddWithValue("@nuevoisbn", ejem.isbn);
-                command.Parameters.AddWithValue("@nuevoissn", ejem.issn);
-                command.Parameters.AddWithValue("@nuevodoi", ejem.doi);
-                command.Parameters.AddWithValue("@nuevoid_coleccion", ejem.coleccion);
+                command.Parameters.AddWithValue("@nuevonombre", ejem.Nombre_Ejemplar);
+                command.Parameters.AddWithValue("@nuevafecha_publicada", ejem.Fecha_de_publicacion);
+                command.Parameters.AddWithValue("@nuevaimagen_portada", ejem.Portada);
+                command.Parameters.AddWithValue("@nuevoid_idioma", ejem.Idioma);
+                command.Parameters.AddWithValue("@nuevoid_editorial", ejem.Editorial);
+                command.Parameters.AddWithValue("@nuevoid_formato", ejem.Formato);
+                command.Parameters.AddWithValue("@nuevoisbn", ejem.ISBN);
+                command.Parameters.AddWithValue("@nuevoissn", ejem.ISSN);
+                command.Parameters.AddWithValue("@nuevodoi", ejem.DOI);
+                command.Parameters.AddWithValue("@nuevoid_coleccion", ejem.Coleccion);
                 
                 
               
@@ -36,7 +36,7 @@ namespace BINAES_Proyecto
                 connection.Close();
             }
             
-            Palabras_Clave PalabrasClave= new Palabras_Clave(ejem.PC,EjemplarDAO.nuevoidEejmplar());
+            Palabras_Clave PalabrasClave= new Palabras_Clave(ejem.Palabras_clave,EjemplarDAO.nuevoidEejmplar());
             InsertarNuevaPalabraClave(PalabrasClave);
             
             
@@ -59,9 +59,9 @@ namespace BINAES_Proyecto
                     while (reader.Read())
                     {
                         Ejemplar ejem = new Ejemplar();
-                        ejem.id = Convert.ToInt32(reader["id"].ToString());
+                        ejem.ID = Convert.ToInt32(reader["id"].ToString());
 
-                        nuevoidEjemplar = ejem.id;
+                        nuevoidEjemplar = ejem.ID;
                         
                         
                     }

@@ -40,7 +40,7 @@ namespace BINAES_Proyecto.Forms
 
                         pnlFoundItem_Prestamo.Visible = true;
 
-                        picFoundItem_Prestamo.Image = Image.FromFile(Buscado.imagen);
+                        picFoundItem_Prestamo.Image = Image.FromFile(Buscado.Portada);
                     }
                     else 
                     {

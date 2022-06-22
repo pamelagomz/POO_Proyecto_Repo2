@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BINAES_Proyecto.Forms;
 
 namespace BINAES_Proyecto
 {
@@ -111,6 +112,12 @@ namespace BINAES_Proyecto
         {
             ActivateButton(sender);
             OpenChildForm(new Forms.frmReserva(),sender);
+        }
+        
+
+        private void frmBinaesMain_Load(object sender, EventArgs e)
+        {
+                
         }
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace BINAES_Proyecto.Forms
@@ -36,19 +37,19 @@ namespace BINAES_Proyecto.Forms
         private void btnCrearEjemplar_Click(object sender, EventArgs e)
         {
             Ejemplar ejem = new Ejemplar();
-            ejem.nombre = txtNombreEjemplar.Text;
-            ejem.fecha = Convert.ToDateTime(txtFechaPublicacion.Text);
-            ejem.coleccion = cmbColeccionEjemplar.SelectedValue.ToString();
-            ejem.editorial = cmbEditorial.SelectedValue.ToString();
-            ejem.formato = cmbFomato.SelectedValue.ToString();
-            ejem.idioma = cmbIdioma.SelectedValue.ToString();
-            ejem.imagen = txtFotografia.Text;
-            ejem.isbn = txtIsbn.Text;
-            ejem.issn = txtissn.Text;
-            ejem.doi = txtDoi.Text;
-            ejem.PC = txtPalabraClave1.Text;
-            ejem.PC = txtPalabraClave2.Text;
-            ejem.PC = txtPalabraClave3.Text;
+            ejem.Nombre_Ejemplar = txtNombreEjemplar.Text;
+            ejem.Fecha_de_publicacion = Convert.ToDateTime(txtFechaPublicacion.Text);
+            ejem.Coleccion = cmbColeccionEjemplar.SelectedValue.ToString();
+            ejem.Editorial = cmbEditorial.SelectedValue.ToString();
+            ejem.Formato = cmbFomato.SelectedValue.ToString();
+            ejem.Idioma = cmbIdioma.SelectedValue.ToString();
+            ejem.Portada = txtFotografia.Text;
+            ejem.ISBN = txtIsbn.Text;
+            ejem.ISSN = txtissn.Text;
+            ejem.DOI = txtDoi.Text;
+            ejem.Palabras_clave = txtPalabraClave1.Text;
+            ejem.Palabras_clave = txtPalabraClave2.Text;
+            ejem.Palabras_clave = txtPalabraClave3.Text;
             
             
             EjemplarDAO.IngresarEjemplar(ejem);
@@ -66,5 +67,287 @@ namespace BINAES_Proyecto.Forms
             MessageBox.Show("Editorial ingresada con éxito");
             Update();
         }
-    }
+
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+             if(cmbOpcionesBuscar.Text == "Titulo completo") // Aqui pones el nombre que le hayas puesto a la combobox
+             { 
+                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorTitulo(txtBuscarEjemplar.Text.Trim());
+                txtBuscarEjemplar.Clear();
+
+                dgvResultadosBusqueda.DataSource = null;
+                dgvResultadosBusqueda.DataSource = resultado;
+                dgvResultadosBusqueda.Columns["ID"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                
+                dgvResultadosBusqueda.Columns["ID"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Nombre_Ejemplar"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Coleccion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Autor"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISBN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISSN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["DOI"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Fecha_de_publicacion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Editorial"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Formato"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Idioma"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Palabras_clave"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+
+             }
+            else if (cmbOpcionesBuscar.Text == "Titulo parcial")
+            {
+                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorTituloParcial(txtBuscarEjemplar.Text.Trim());
+                txtBuscarEjemplar.Clear();
+                dgvResultadosBusqueda.DataSource = null;
+                dgvResultadosBusqueda.DataSource = resultado;
+                
+                dgvResultadosBusqueda.Columns["ID"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Nombre_Ejemplar"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Coleccion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Autor"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISBN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISSN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["DOI"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Fecha_de_publicacion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Editorial"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Formato"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Idioma"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Palabras_clave"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+
+            }
+            else if (cmbOpcionesBuscar.Text == "Autor")
+            {
+
+                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorAutor(txtBuscarEjemplar.Text.Trim());
+                txtBuscarEjemplar.Clear();
+                dgvResultadosBusqueda.DataSource = null;
+                dgvResultadosBusqueda.DataSource = resultado;
+                
+                dgvResultadosBusqueda.Columns["ID"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Nombre_Ejemplar"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Coleccion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Autor"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISBN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISSN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["DOI"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Fecha_de_publicacion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Editorial"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Formato"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Idioma"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Palabras_clave"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+
+            }
+            else if (cmbOpcionesBuscar.Text == "Fisico")
+            {
+                txtBuscarEjemplar.Text = cmbOpcionesBuscar.Text;
+                
+                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorFormato(txtBuscarEjemplar.Text.Trim());
+                txtBuscarEjemplar.Clear();
+                dgvResultadosBusqueda.DataSource = null;
+                dgvResultadosBusqueda.DataSource = resultado;
+                
+                dgvResultadosBusqueda.Columns["ID"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Nombre_Ejemplar"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Coleccion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Autor"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISBN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISSN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["DOI"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Fecha_de_publicacion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Editorial"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Formato"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Idioma"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Palabras_clave"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+
+            }
+            else if (cmbOpcionesBuscar.Text == "Digital")
+            {
+                txtBuscarEjemplar.Text = cmbOpcionesBuscar.Text;
+                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorFormato(txtBuscarEjemplar.Text.Trim());
+                txtBuscarEjemplar.Clear();
+                dgvResultadosBusqueda.DataSource = null;
+                dgvResultadosBusqueda.DataSource = resultado;
+                
+                dgvResultadosBusqueda.Columns["ID"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Nombre_Ejemplar"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Coleccion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Autor"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISBN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISSN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["DOI"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Fecha_de_publicacion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Editorial"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Formato"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Idioma"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Palabras_clave"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+
+            }
+            else if (cmbOpcionesBuscar.Text == "Mostrar todos")
+            {
+                txtBuscarEjemplar.Text = cmbOpcionesBuscar.Text;
+                List<Ejemplar> resultado = BuscarEjemplarDAO.General();
+                txtBuscarEjemplar.Clear();
+                dgvResultadosBusqueda.DataSource = null;
+                dgvResultadosBusqueda.DataSource = resultado;
+                
+                dgvResultadosBusqueda.Columns["ID"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Nombre_Ejemplar"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Coleccion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Autor"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISBN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISSN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["DOI"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Fecha_de_publicacion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Editorial"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Formato"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Idioma"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Palabras_clave"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+
+            }
+            else if (cmbOpcionesBuscar.Text == "Por palabra clave")
+            {
+
+                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorPalabraClave(txtBuscarEjemplar.Text.Trim()); // Ponele el nombre de la txt box
+                txtBuscarEjemplar.Clear();
+                dgvResultadosBusqueda.DataSource = null;
+                dgvResultadosBusqueda.DataSource = resultado;
+                
+                dgvResultadosBusqueda.Columns["ID"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Nombre_Ejemplar"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Coleccion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Autor"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISBN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["ISSN"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["DOI"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Fecha_de_publicacion"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Editorial"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Formato"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Idioma"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                dgvResultadosBusqueda.Columns["Palabras_clave"].DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                
+            }
+             else
+             {
+                 txtBuscarEjemplar.Text = cmbOpcionesBuscar.Text;
+                 List<Ejemplar> resultado = BuscarEjemplarDAO.General();
+                 txtBuscarEjemplar.Clear();
+                 
+                 dgvResultadosBusqueda.DataSource = null;
+                 dgvResultadosBusqueda.DataSource = resultado;
+                 
+                 dgvResultadosBusqueda.Columns["ID"].DefaultCellStyle.Alignment =
+                     DataGridViewContentAlignment.MiddleCenter;
+                 dgvResultadosBusqueda.Columns["Nombre_Ejemplar"].DefaultCellStyle.Alignment =
+                     DataGridViewContentAlignment.MiddleCenter;
+                 dgvResultadosBusqueda.Columns["Coleccion"].DefaultCellStyle.Alignment =
+                     DataGridViewContentAlignment.MiddleCenter;
+                 dgvResultadosBusqueda.Columns["Autor"].DefaultCellStyle.Alignment =
+                     DataGridViewContentAlignment.MiddleCenter;
+                 dgvResultadosBusqueda.Columns["ISBN"].DefaultCellStyle.Alignment =
+                     DataGridViewContentAlignment.MiddleCenter;
+                 dgvResultadosBusqueda.Columns["ISSN"].DefaultCellStyle.Alignment =
+                     DataGridViewContentAlignment.MiddleCenter;
+                 dgvResultadosBusqueda.Columns["DOI"].DefaultCellStyle.Alignment =
+                     DataGridViewContentAlignment.MiddleCenter;
+                 dgvResultadosBusqueda.Columns["Fecha_de_publicacion"].DefaultCellStyle.Alignment =
+                     DataGridViewContentAlignment.MiddleCenter;
+                 dgvResultadosBusqueda.Columns["Editorial"].DefaultCellStyle.Alignment =
+                     DataGridViewContentAlignment.MiddleCenter;
+                 dgvResultadosBusqueda.Columns["Formato"].DefaultCellStyle.Alignment =
+                     DataGridViewContentAlignment.MiddleCenter;
+                 dgvResultadosBusqueda.Columns["Idioma"].DefaultCellStyle.Alignment =
+                     DataGridViewContentAlignment.MiddleCenter;
+                 dgvResultadosBusqueda.Columns["Palabras_clave"].DefaultCellStyle.Alignment =
+                     DataGridViewContentAlignment.MiddleCenter;
+                 
+
+             }
+        }
+        
+    } 
 }
