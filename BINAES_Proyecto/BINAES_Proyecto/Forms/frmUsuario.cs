@@ -23,7 +23,7 @@ namespace BINAES_Proyecto.Forms
     
             UsuarioDAO.IngresarUsuario(user);
             MessageBox.Show("Ingresado con exito");
-
+            
         }
 
 

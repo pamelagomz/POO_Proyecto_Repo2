@@ -101,6 +101,7 @@ C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proy
 C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.exe
 C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe.config
 C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe
 C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.pdb
@@ -141,3 +142,5 @@ C:\Users\fereg\Desktop\POO_BDD_PROYECTO\POO_Proyecto_Repo2\BINAES_Proyecto\BINAE
 C:\Users\fereg\Desktop\POO_BDD_PROYECTO\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.exe
 C:\Users\fereg\Desktop\POO_BDD_PROYECTO\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.pdb
 >>>>>>> FERNANDO
+=======
+>>>>>>> parent of 4fb5165 (:zap:EventosCasiCompleto)

@@ -49,7 +49,7 @@
     <Compile Include="Area.cs" />
     <Compile Include="Autor.cs" />
     <Compile Include="BuscarEjemplarDAO.cs" />
-    <Compile Include="EventoDAO.cs" />
+    <Compile Include="BuscarEventoDAO.cs" />
     <Compile Include="Coleccion.cs" />
     <Compile Include="Editorial.cs" />
     <Compile Include="EditorialDAO.cs" />
@@ -121,10 +121,13 @@
     <Compile Include="GeneroDAO.cs" />
     <Compile Include="Idioma.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="Objetivos.cs" />
 =======
     <Compile Include="IMGDAO.cs" />
 >>>>>>> FERNANDO
+=======
+>>>>>>> parent of 4fb5165 (:zap:EventosCasiCompleto)
     <Compile Include="Palabras_Clave.cs" />
     <Compile Include="PrestamoDAO.cs" />
     <Compile Include="Program.cs" />
