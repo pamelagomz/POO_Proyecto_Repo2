@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 
 namespace BINAES_Proyecto.Forms
@@ -352,6 +353,40 @@ namespace BINAES_Proyecto.Forms
         private void label2_Click(object sender, EventArgs e)
         {
             throw new System.NotImplementedException();
+        }
+
+        private void txtFotografia_DoubleClick(object sender, EventArgs e)
+        {
+            string local_route;
+
+            try
+            {
+                using (OpenFileDialog VentanaImagen = new OpenFileDialog())
+                {
+                    VentanaImagen.InitialDirectory = @"c:\\";
+
+                    VentanaImagen.Filter = "jpg files (*.jpg)|*.jpg|png files (*.png)|*.png";
+
+                    string DebugRoute = @"RESOURCES\IMAGE\";
+
+                    if (VentanaImagen.ShowDialog() == DialogResult.OK)
+                    {
+                        local_route = AppDomain.CurrentDomain.BaseDirectory + DebugRoute + Path.GetFileName(VentanaImagen.FileName);
+
+                        File.Copy(VentanaImagen.FileName, local_route);
+
+                        txtFotografia.Text = local_route;
+                    }
+
+                }
+            }
+            catch(Exception E)
+            {
+                MessageBox.Show("Importe de imagen no completado. Intente en otro momento.", "Error en importacion.", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+            }
+            
+            MessageBox.Show("¡Imagen importada exitosamente!", "Importación correcta.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     } 
 }
